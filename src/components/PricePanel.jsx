@@ -10,16 +10,15 @@ const CURRENCIES = [
 ];
 
 export default function PricePanel({ preferredCurrency = 'USD', onCurrencyChange }) {
-  // Base price in USD
   const baseUSD = 59.99;
 
-  // Static rates for demo; in production this would be live
+  // Static demo rates; replace with live API in production
   const rates = {
     USD: 1,
     EUR: 0.92,
-    BTC: 1 / 65000, // ~65k USD per BTC
-    ETH: 1 / 3000,  // ~3k USD per ETH
-    ADA: 1 / 0.45,  // ~0.45 USD per ADA
+    BTC: 1 / 65000,
+    ETH: 1 / 3000,
+    ADA: 1 / 0.45,
   };
 
   const prices = useMemo(() => {
@@ -49,7 +48,6 @@ export default function PricePanel({ preferredCurrency = 'USD', onCurrencyChange
         <h3 className="text-lg font-semibold text-white">Purchase</h3>
         <p className="text-sm text-neutral-400 mt-1">Choose your currency. All prices shown at once; your selected currency will be used at checkout.</p>
 
-        {/* Currency selector */}
         <div className="mt-4 flex flex-wrap gap-2">
           {CURRENCIES.map((c) => {
             const active = preferredCurrency === c.code;
@@ -65,7 +63,6 @@ export default function PricePanel({ preferredCurrency = 'USD', onCurrencyChange
           })}
         </div>
 
-        {/* All prices */}
         <div className="mt-5 grid grid-cols-2 gap-3">
           {CURRENCIES.map((c) => {
             const active = preferredCurrency === c.code;
@@ -83,7 +80,6 @@ export default function PricePanel({ preferredCurrency = 'USD', onCurrencyChange
           })}
         </div>
 
-        {/* Quantity */}
         <div className="mt-5">
           <label className="text-sm text-neutral-300">Quantity</label>
           <div className="mt-2 flex items-center gap-2">
@@ -114,7 +110,6 @@ export default function PricePanel({ preferredCurrency = 'USD', onCurrencyChange
           </div>
         </div>
 
-        {/* Checkout */}
         <div className="mt-6 grid gap-3">
           <button className="inline-flex items-center justify-center gap-2 rounded-lg px-4 py-3 bg-gradient-to-r from-fuchsia-600 to-blue-600 text-white font-medium shadow-lg shadow-fuchsia-900/30 hover:brightness-110 transition">
             <ShoppingCart size={18} />

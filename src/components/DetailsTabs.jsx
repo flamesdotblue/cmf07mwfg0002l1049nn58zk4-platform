@@ -50,7 +50,7 @@ export default function DetailsTabs() {
                 <li>Storage: 40 GB</li>
               </ul>
             </div>
-            <div className="rounded-lg border border-white/10 p-4 bg-white/5">
+            <div className="rounded-lg border border-white/10 p-4 bg:white/5 bg-white/5">
               <h4 className="text-neutral-200 font-medium mb-2">Recommended</h4>
               <ul className="space-y-1 text-neutral-300">
                 <li>OS: Windows 11 64-bit</li>

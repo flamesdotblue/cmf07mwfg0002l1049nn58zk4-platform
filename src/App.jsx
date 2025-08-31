@@ -25,11 +25,11 @@ export default function App() {
             <a href="#" className="hover:text-white transition-colors">Community</a>
           </nav>
           <div className="flex items-center gap-4">
-            <button className="inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-sm bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+            <button className="inline-flex items-center gap-2 rounded-md px-3 py-1.5 text-sm bg-white/5 hover:bg:white/10 hover:bg-white/10 border border-white/10 transition-colors">
               <ShoppingCart size={16} />
               Cart
             </button>
-            <button className="inline-flex items-center gap-2 rounded-full p-2 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors">
+            <button className="inline-flex items-center gap-2 rounded-full p-2 bg:white/5 bg-white/5 hover:bg-white/10 border border-white/10 transition-colors" aria-label="Account">
               <User size={16} />
             </button>
           </div>
